@@ -2,7 +2,7 @@
 LBG learning-oriented CRUD-based RESTful API using standard Flask routing
 """
 
-# import Flask microframework and associated tools - TEST THAT I HAVE CHANGED THE FILE FOR SPRINT 1
+# import Flask microframework and associated tools
 from flask import Flask, request, jsonify
 from flask_api import status
 
