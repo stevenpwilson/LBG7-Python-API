@@ -1,0 +1,17 @@
+version: "3.3"
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+      protocol: TCP
+  volumes:
+  - type: bind
+    source: ./nginx/nginx.conf
+    target: /etc/nginx/nginx.conf
+  depends_on:
+  - python-api
+  python-api:
+    image: stevewilson/python-api:latest
+    build: ./
