@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                docker login
                 docker-compose build
                 docker-compose push 
                 '''
