@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                docker login
+                withDockerRegistry([ credentialsId: "Docker-Hub-Cred", url: "https://index.docker.io/v1/" ])
                 docker-compose build
                 docker-compose push 
                 '''
