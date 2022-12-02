@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh '''
                 docker-compose build
+                docker-compose push
                 '''
             }
         }
